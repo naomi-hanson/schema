@@ -77,7 +77,7 @@ p {
 /* HEADER */
 header {
 	color: #000000;
-	font-weight: bold;
+	font-weight: regular;
 	}
 header nav {
 	padding: lem 0;
@@ -89,10 +89,9 @@ header nav {
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#196779', endColorstr='#448d9c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
 }
 header nav ul {
-	display: inline;
+	display: inline-block;
 	text-align: right;
 	float: right;
-	/*margin: 0;*/
 	margin: 25px 0 0 0;
 }
 header nav ul > li {
@@ -116,9 +115,12 @@ header nav ul > li > a {
 	color: #FFFFFF;
 	text-decoration: none;
 }
-/*header nav ul > li.btn-outline:hover > a {
+header nav ul > li.btn-outline:hover > a {
 	color: #34495E;
-}*/
+}
+header .sign-in-up {
+	font-weight: bold;
+}
 header nav a > img {
 	margin: 25px 0 0 0;
 }
@@ -128,12 +130,12 @@ header .hero {
 	position: relative;
 	background: url('../images/dashboard.png') top right no-repeat;
 	min-height: 670px;
-	background-position-y: 40px; 
+	background-position-y: 80px; 
 }
 header .hero h1 {
 	font-size: 52px;
 	font-weight: normal;
-	margin: 95px 0 0;
+	margin: 270px 0 0;
 }
 header .hero p {
 	font-size: 22px;
@@ -141,12 +143,6 @@ header .hero p {
 	font-weight: 100;
 	margin: 10px 0 40px;
 }
-/*header .hero img {
-	display: block;
-	line-height: 24px;
-	font-weight: 100;
-	margin: 8px 0 45px;
-}*/
 header .hero img {
 	display: inline-block;
 	float: right;
@@ -160,7 +156,7 @@ header .hero img {
 	font-weight: 700;
 	text-decoration: none;
 	padding: 10px 30px;
-	background: #2ECC71;
-	border: 2px solid #2ECC71;
-	box-shadow: 0px 2px 0px 0px #22894E;
+	background: #D17322;
+	border: 2px solid #D17322;
+	box-shadow: 0px 2px 0px 0px #79400D;
 }
