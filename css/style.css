@@ -127,7 +127,8 @@ header .hero {
 	display: block;
 	position: relative;
 	background: url('../images/dashboard.png') top right no-repeat;
-	min-height: 768px;
+	min-height: 670px;
+	background-position-y: 40px; 
 }
 header .hero h1 {
 	font-size: 52px;
