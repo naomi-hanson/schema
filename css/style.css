@@ -160,3 +160,83 @@ header .hero img {
 	border: 2px solid #D17322;
 	box-shadow: 0px 2px 0px 0px #79400D;
 }
+
+/* BENEFITS */
+.benefits {
+	text-align: center;
+	display: block;
+	position: relative;
+}
+.benefits ul {
+	margin: 0 auto;
+	padding: 4em 0;
+}
+.benefits ul li {
+	list-style-type: none;
+	display: inline-block;
+}
+.notes {
+	background: url(images/benefits-notes.jpg);
+	width: 384px;
+	height: 384px;
+	position: relative;
+	overflow: hidden;
+	margin: 20px;
+}
+.notes > .notes-description {
+	position: absolute;
+	top: 8px;
+	left: 10px;
+	width: 355px;
+	height: 355px;
+	padding: 20px 10px;
+	background: inherit;
+	background-attachment: fixed;
+	overflow: hidden;
+}
+.notes > .notes-description:before {
+	content: "";
+	position: absolute;
+	bottom: -20px;
+	left: 0;
+	width: 200%;
+	height: 200%;
+	background: inherit;
+	background-attachment: fixed;
+	-webkit-filter: blur(4px);
+	filter: blur(4px);
+}
+.notes > .notes-description:after {
+	content: "";
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0, 0.50);
+}
+.notes .notes-description i {
+	margin: 0;
+	color: #FFFFFF;
+	position: relative;
+	z-index: 1;
+}
+.notes .notes-description h2 {
+	margin: 0;
+	color: #FFFFFF;
+	position: relative;
+	z-index: 1;
+}
+.notes .notes-description p {
+	margin: 0;
+	color: #FFFFFF;
+	position: relative;
+	z-index: 1;
+}
+.notes-description {
+	opacity: 0;
+	transition: opacity 0.3s linear;
+}
+.notes:hover .notes-description {
+	opacity: 1;
+}
