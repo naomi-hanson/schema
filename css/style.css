@@ -54,6 +54,9 @@ header .site-logo {
 	position: relative;
 	top:-5px;
 }
+header .one-third > .logo {
+	width: 20%;
+}
 header nav {
 	padding: lem 0;
 	/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#196779+0,448d9c+100 */
@@ -65,10 +68,14 @@ header nav {
 }
 header nav ul {
 	display: inline;
-	text-align: center;
+	text-align: left;
 	float: right;
 	margin: 10px auto 0;
 	padding-top: 30px;
+	padding-left: 0px
+}
+header nav .menu ul {
+	float: left;
 }
 header nav ul > li {
 	list-style-type: none;
@@ -411,7 +418,220 @@ footer .copyright-block {
     text-align: center;
 }
 
+ /* DASHBOARD */
+ .dashboard {
+   background:#F7F7F7;
+ }
+ .dashboard > header .container {
+ 	padding: 0px;
+ 	margin: 0 auto 0 0;
+ }
+ .dashboard .left-nav {
+   height: 100vh;
+   width:14.66666667%;
+   color:#FFFFFF;
+   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#196779+0,448d9c+100 */
+   background: #196779; /* Old browsers */
+   background: -moz-linear-gradient(45deg,  #196779 0%, #448d9c 100%); /* FF3.6-15 */
+   background: -webkit-linear-gradient(45deg,  #196779 0%,#448d9c 100%); /* Chrome10-25,Safari5.1-6 */
+   background: linear-gradient(45deg,  #196779 0%,#448d9c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#196779', endColorstr='#448d9c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+   float:left;
+   position: fixed;
+   display:block;
+ }
+ .dashboard .left-nav .site-logo {
+   padding:16.5px 0;
+   background:#196779;
+   display:block;
+   text-align: center;
+ }
+ .dashboard .left-nav .items {
+   padding:0 6%;
+ }
+ .dashboard .left-nav .items p {
+   font-weight: 600;
+   text-transform: uppercase;
+   font-size: 12px;
+   color: #E2E2E2;
+   line-height: 15px;
+ }
+ .dashboard .left-nav .items ul {
+   margin:0 0 40px;
+   padding:0;
+ }
+ .dashboard .left-nav .items ul li {
+   list-style-type: none;
+   margin-bottom: 15px;
+ }
+ .dashboard .left-nav .items ul li a {
+   color:#FFFFFF;
+   text-decoration: none;
+   font-weight: 100;
+ }
+ .dashboard .left-nav .items ul li a i {
+   width:16px;
+   text-align: center;
+   margin-right:8px;
+ }
+ .dashboard header {
+ 	background: #448D9C;
+ 	color: #FFFFFF;
+ 	height: 80px;
+ 	width:85.33333333%;
+ 	position: relative;
+ 	float:right;
+ 	overflow: hidden;
+ 	z-index: 0;
+ }
+ .dashboard header .left-block {
+ 	width: 200px;
+ 	position: fixed;
+ 	margin-right: 30px;
+ }
+ .dashboard header .right-block .settings {
+ 	padding: 13px 0;
+ 	margin: 0 auto;
+ 	display: block;
+   position:absolute;
+   /* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#196779+0,448d9c+100 */
+   background: #196779; /* Old browsers */
+   background: -moz-linear-gradient(45deg,  #196779 0%, #448d9c 100%); /* FF3.6-15 */
+   background: -webkit-linear-gradient(45deg,  #196779 0%,#448d9c 100%); /* Chrome10-25,Safari5.1-6 */
+   background: linear-gradient(45deg,  #196779 0%,#448d9c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#196779', endColorstr='#448d9c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+   width:260px;
+   right: 0px;
+   clear: both;
+ }
+ .dashboard header .middle-block {
+ 	width: 120px;
+ 	float: right;
+ 	margin-right: 290px;
+ 	margin-top: 30px;
+ }
+ .dashboard header .btn {
+	background: #D17322;
+    border: 2px solid #D17322;
+    border-radius: 4px;
+    box-shadow: 0px 2px 0px 0px #79400D;
+    width: 111px;
+    padding: 13.5px 35px;
+    text-align: center;
+ }
+ .dashboard header .left-block .header {
+   margin:20px 1% 30px 30px;
+ }
+  .dashboard header .right-block .header {
+   margin:0;
+ }
+ .dashboard header .header h1 {
+   font-family: "Asap", Helvetica, Arial, sans-serif;
+   font-weight: 400;
+   font-size: 36px;
+   text-align: left;
+   display:inline-block;
+   margin: 0;
+ }
+ .dashboard header .settings img {
+   height:55px;
+   width:55px;
+   border-radius: 50%;
+   margin-left:12px;
+   display: inline;
+ }
+ .dashboard header .settings p {
+   display: inline-block;
+   vertical-align: top;
+   color: #FFFFFF;
+   padding-top: 18px;
+   font-weight: 400;
+   margin:0 0 0 10px;
+   font-size: 14px;
+ }
+ .dashboard header .settings a {
+   color:#FFFFFF;
+   text-decoration: none;
+   text-align: right;
+   float: right;
+   margin-right: 10px;
+   margin-top: 18px;
+ }
+
+ /* CONTENT */
+ .content {
+   padding:6em 1% 1.5em;
+   float:right;
+   width:98%;
+   position: relative;
+ }
+  .content-item {
+   width:96%;
+   margin:0 2% 25px;
+   float:left;
+   display:block;
+ }
+ .item-box {
+   display:block;
+   height:230px;
+   background: #FFFFFF;
+   box-shadow: 0px 1px 3px 0px rgba(0,0,0,0.40);
+   position: relative;
+   overflow: hidden;
+   padding:20px;
+ }
+ .item-box > img {
+   position:absolute;
+   height:100%;
+   width:auto;
+   top:0;
+   left:0;
+   right:0;
+ }
+ .item-box h2 {
+   font-family: 'Lato', Helvetica, Arial, sans-serif;
+   font-weight: 700;
+   font-size: 15px;
+   line-height: 17px;
+   margin:0;
+ }
+ .item-box h2 a {
+   color: #3498DB;
+   text-decoration: none;
+ }
+ .item-box h2 img {
+   width:16px;
+   height:16px;
+   position:relative;
+   top:2px;
+   margin-right:5px;
+ }
+ .item-box p {
+   font-size: 14px;
+   color: #333333;
+   line-height: 18px;
+   margin:5px 0 0;
+ }
+
 /* @media */
+
+/* LARGER MOBILE DEVICES */
+ @media (min-width:460px) {
+   .content {
+     padding:1.5em 1%;
+     float:right;
+     width:90%;
+     position: relative;
+   }
+   .content-item {
+     width:46%;
+     margin:0 2% 25px;
+     float:left;
+     display:block;
+   }
+ }
+
+/* TABLETS */
 @media (min-width: 768px) {
 	.container {
 		width: 750px;
@@ -477,7 +697,32 @@ footer .copyright-block {
 	    width: auto;
 	    text-align: right;
 	}
+	.dashboard > header .container {
+		width: 100%
+	}
+	.dashboard > .one-third {
+    width: 28.44433333%;
+    float: left;
+    position: relative;
+    min-height: 1px;
+    margin: 0 2% 20px;
+	}
+	.content {
+     padding:1.5em 5%;
+     float:right;
+     width:90%;
+     position: relative;
+   }
+   .content > .container {
+     width:700px;
+   }
+   .content-item {
+     width:31.33333%;
+     margin:0 1% 25px;
+   }
 }
+
+/* LAPTOPS AND DESKTOPS */
 @media (min-width: 992px) {
 	.container {
 		width: 970px;
@@ -486,12 +731,33 @@ footer .copyright-block {
 		width: 46%;
 	}
 	.one-third {
-		width: 29.33333%;
+		width: 29.999999%;
 	}
 	.one-fourth {
 		width: 21%;
 	}
+	.logo {
+		width: 20%;
+	}
+	.menu {
+		width: 40%;
+	}
+	.content {
+     padding:1.5em 1%;
+     float:right;
+     width:83.33333333%;
+     position: relative;
+   }
+   .content > .container {
+     width:auto;
+   }
+   .content-item {
+     width:23%;
+     margin:0 1% 25px;
+   }
 }
+
+/* EXTRA LARGE SCREENS */
 @media (min-width: 1200px) {
 	.container {
 		width: 1170px;
