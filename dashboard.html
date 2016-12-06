@@ -15,8 +15,14 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="css/dropit.css">
+
+	<!-- JavaScript -->
+
 </head>
 <body class="dashboard">
+	<!-- RESPONSIVE NAV -->
+	<a href="#" class="hamburger" id="menu">&#9776;</a>
 	<!-- LEFT NAV -->
 	<nav id="left-nav" class="left-nav">
 		<a href="#" class="site-logo"><img src="images/site-logo.png"></a>
@@ -48,7 +54,17 @@
 			<div class="right-block">
 				<div class="middle-block">
 					<div class="header">
-						<a href="#" class="btn">+ Add</a>	
+						<!-- <a href="#" class="btn">+ Add</a> -->
+						<ul class="menu">
+				            <li>
+				              <a href="#" class="btn">+ Add</a>
+				              <ul>
+				                  <li><a href="#"><i class="fa fa-file-o"></i> Note</a></li>
+				                  <li><a href="#"><i class="fa fa-picture-o"></i> Image</a></li>
+				                  <li><a href="#"><i class="fa fa-link"></i> Link</a></li>
+				              </ul>
+				            </li>
+				        </ul>
 					</div>
 				</div>
 				<div class="settings">
@@ -134,5 +150,13 @@
 			</div>
 		</section>
 	</main>
+   <script src="js/jquery-3.1.1.min.js"></script>
+   <script src="js/dropit.js"></script>
+   <script type="text/javascript">
+     $(".menu").dropit();
+     $("#menu").click(function(){
+     	$("#left-nav").toggleClass("open", 200);
+     });
+   </script>
 </body>
 </html>
