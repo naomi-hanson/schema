@@ -475,6 +475,11 @@ footer .copyright-block {
    width:16px;
    text-align: center;
    margin-right:8px;
+   margin-left: 5px;
+ }
+ .dashboard .left-nav .active {
+ 	background: #8DE9FF;
+ 	padding: 5px;
  }
  .dashboard header {
  	background: #448D9C;
