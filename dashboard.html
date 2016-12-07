@@ -177,8 +177,17 @@
    <script type="text/javascript">
      $(".menu").dropit();
      $("#menu").click(function(){
-     	$("#left-nav").toggleClass("open", 200);
-     });
+      	$("#left-nav").toggleClass("open", 200);
+      });
+     // $("#menu").click(function(event){
+     // 	event.stopPropagation();
+     // 	$("#left-nav").toggleClass("open", 200);
+     // });
+     // $(document).click( function(){
+     // 	$('#left-nav').hide();
+     // });
+            
+                
    </script>
 </body>
 </html>
