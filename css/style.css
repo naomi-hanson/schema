@@ -49,7 +49,53 @@ p {
 header {
 	color: #000000;
 	font-weight: regular;
-	}
+	} 
+.top-nav {
+ 	height: 100%;
+ 	width: 280px;
+ 	color: #FFFFFF;
+   background: #196779; /* Old browsers */
+   background: -moz-linear-gradient(45deg,  #196779 0%, #448d9c 100%); /* FF3.6-15 */
+   background: -webkit-linear-gradient(45deg,  #196779 0%,#448d9c 100%); /* Chrome10-25,Safari5.1-6 */
+   background: linear-gradient(45deg,  #196779 0%,#448d9c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#196779', endColorstr='#448d9c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+   float:left;
+   position: fixed;
+   display:block;
+   -webkit-transition: all 0.3s ease-in-out;
+   -moz-transition: all 0.3s ease-in-out;
+   -o-transition: all 0.3s ease-in-out;
+   transition: all 0.3s ease-in-out;
+   transform: translate(-280px,0);
+     -webkit-transform: translate(-280px,0); /** Chrome & Safari **/
+     -o-transform: translate(-280px,0); /** Opera **/
+     -moz-transform: translate(-280px,0); /** Firefox **/
+ }
+.top-nav.open {
+   display:block;
+   width:100px;
+   -webkit-transition: all 0.3s ease-in-out;
+   -moz-transition: all 0.3s ease-in-out;
+   -o-transition: all 0.3s ease-in-out;
+   transition: all 0.3s ease-in-out;
+   transform: translate(0,0);
+     -webkit-transform: translate(0,0); /** Chrome & Safari **/
+     -o-transform: translate(0,0); /** Opera **/
+     -moz-transform: translate(0,0); /** Firefox **/
+     z-index: 100;
+ }
+.hamburger {
+ 	position:fixed;
+   z-index: 1000;
+   background:#196779;
+   color:#FFF;
+   text-decoration: none;
+   font-size: 22px;
+   padding: 10px 15px;
+   border-radius: 4px;
+   left: 5px;
+   top: 15px;
+ }
 header .site-logo {
 	position: relative;
 	top:-5px;
@@ -428,15 +474,17 @@ footer .copyright-block {
  .dashboard {
    background:#F7F7F7;
  }
- .left-nav {
+ .dashboard > .left-nav {
  	height: 100%;
  	width: 280px;
  	color: #FFFFFF;
- 	background: #34495E;
-   background-image: linear-gradient(206deg, #5F81A3 0%, #34495E 94%);
+   background: #196779; /* Old browsers */
+   background: -moz-linear-gradient(45deg,  #196779 0%, #448d9c 100%); /* FF3.6-15 */
+   background: -webkit-linear-gradient(45deg,  #196779 0%,#448d9c 100%); /* Chrome10-25,Safari5.1-6 */
+   background: linear-gradient(45deg,  #196779 0%,#448d9c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#196779', endColorstr='#448d9c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
    float:left;
    position: fixed;
-   position:absolute;
    display:block;
    -webkit-transition: all 0.3s ease-in-out;
    -moz-transition: all 0.3s ease-in-out;
@@ -447,7 +495,7 @@ footer .copyright-block {
      -o-transform: translate(-280px,0); /** Opera **/
      -moz-transform: translate(-280px,0); /** Firefox **/
  }
- .left-nav.open {
+ .dashboard > .left-nav.open {
    display:block;
    width:280px;
    -webkit-transition: all 0.3s ease-in-out;
@@ -460,8 +508,8 @@ footer .copyright-block {
      -moz-transform: translate(0,0); /** Firefox **/
      z-index: 100;
  }
- .hamburger {
- 	position:absolute;
+ .dashboard > .hamburger {
+ 	position:fixed;
    z-index: 1000;
    background:#196779;
    color:#FFF;
@@ -473,7 +521,7 @@ footer .copyright-block {
    top: 15px;
  }
  .dashboard .left-nav .site-logo {
-   padding:16.5px 0;
+   padding:16.5px 0 16.5px 40px;
    background:#196779;
    display:block;
    text-align: center;
@@ -507,9 +555,51 @@ footer .copyright-block {
    margin-right:8px;
    margin-left: 5px;
  }
+ .dashboard .left-nav .items ul li i {
+   width:16px;
+   text-align: center;
+   margin-right:8px;
+   margin-left: 5px;
+ }
  .dashboard .left-nav .active {
  	background: #8DE9FF;
  	padding: 5px;
+ }
+ .dashboard .left-nav .settings {
+ 	position: fixed;   
+   background: #448D9C;
+   width: 100%;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   padding: 10px 0;
+ }
+ .dashboard .left-nav .settings img {
+   height:55px;
+   width:55px;
+   border-radius: 50%;
+   margin-left:12px;
+   display: inline;
+ }
+ .dashboard .left-nav .settings p {
+   display: inline-block;
+   vertical-align: top;
+   color: #FFFFFF;
+   padding-top: 18px;
+   font-weight: 400;
+   margin:0 0 0 10px;
+   font-size: 14px;
+ }
+ .dashboard .left-nav .settings a {
+ 	color:#FFFFFF;
+   text-decoration: none;
+   text-align: right;
+   float: right;
+   margin-right: 20px;
+   margin-top: 4px;
+ }
+ .dashboard .left-nav .settings ul a {
+ 	text-align: left;
  }
  .dashboard header {
  	background: #448D9C;
@@ -530,6 +620,7 @@ footer .copyright-block {
  	width: 200px;
  	position: fixed;
  	margin-right: 30px;
+ 	margin-left: 45px;
  }
  .dashboard header .right-block .settings {
  	padding: 13px 0 9px;
@@ -549,7 +640,7 @@ footer .copyright-block {
  .dashboard header .middle-block {
  	width: 120px;
  	float: right;
- 	margin-right: 290px;
+ 	margin-right: 20px;
  	margin-top: 15px;
  }
  .dashboard header .btn {
@@ -570,10 +661,10 @@ footer .copyright-block {
  .dashboard header .header h1 {
    font-family: "Asap", Helvetica, Arial, sans-serif;
    font-weight: 400;
-   font-size: 36px;
+   font-size: 30px;
    text-align: left;
    display:inline-block;
-   margin: 0;
+   margin: 4px;
  }
  .dashboard header .settings img {
    height:55px;
@@ -596,15 +687,21 @@ footer .copyright-block {
    text-decoration: none;
    text-align: right;
    float: right;
-   margin-right: 10px;
-   margin-top: 18px;
+   margin-right: 20px;
+   margin-top: 4px;
+ }
+ .dashboard header .settings ul a {
+ 	text-align: left;
+ }
+ .dashboard header .right-block .settings {
+ 	display: none;
  }
 
  /* CONTENT */
  .content {
  	margin-top: 80px;
    float:right;
-   width:98%;
+   width:100%;
    position: relative;
  }
  .content .container {
@@ -673,9 +770,12 @@ footer .copyright-block {
 
 /* LARGER MOBILE DEVICES */
  @media (min-width:460px) {
+ 	.dashboard header .header h1 {
+	   font-size: 36px;
+	   margin: 0;
+	}
    .content {
     float:right;
-    width: 90%;
     position: relative;
    }
    .content-item {
@@ -684,6 +784,19 @@ footer .copyright-block {
      float:left;
      display:block;
    }
+ }
+
+ /* Moving the .settings from the .left-nav to header */
+ @media (min-width: 690px) {
+ 	.dashboard header .right-block .settings {
+ 		display: block;
+ 	}
+ 	.dashboard .left-nav .settings {
+ 		display: none;
+ 	}
+ .dashboard header .middle-block {
+ 	margin-right: 290px;
+ 	}
  }
 
 /* TABLETS */
@@ -765,11 +878,10 @@ footer .copyright-block {
     .content {
  	margin-top: 80px;
    float:right;
-   width:85.333333%;
    position: relative;
 	}
    .content > .container {
-     width:700px;
+     width:auto;
    }
    .content-item {
      width:31.33333%;
@@ -801,7 +913,13 @@ footer .copyright-block {
 	.homepage-menu {
 		width: 38%;
 	}
-	.left-nav {
+   .hamburger {
+     display:none;
+   	}
+	.dashboard header {
+		width: 85.333333333%;
+	}
+	.dashboard > .left-nav {
      height: 100vh;
      width:14.66666667%;
      color:#FFFFFF;
@@ -819,20 +937,30 @@ footer .copyright-block {
      -o-transform: translate(0,0); /** Opera **/
      -moz-transform: translate(0,0); /** Firefox **/
    	}
-   .left-nav.open {
+   .dashboard > .left-nav.open {
      width:14.66666667%;
      transform: translate(0,0);
      -webkit-transform: translate(0,0); /** Chrome & Safari **/
      -o-transform: translate(0,0); /** Opera **/
      -moz-transform: translate(0,0); /** Firefox **/
    	}
-   .hamburger {
+   .dashboard > .hamburger {
      display:none;
+   	}
+   	.dashboard .left-nav .site-logo {
+   		padding: 23.3px 0;
+   	}
+   	.dashboard .left-nav .site-logo img {
+   		height: auto;
+   		width: 113.8425px;
+   	}
+   	.dashboard header .left-block {
+   		margin-left: 0;
    	}
 	.content {
 	float:right;
-	width: 83.333333%
-     position: relative;
+	width: 85.333333%;
+	position: relative;
    }
    .content > .container {
      width:auto;
@@ -867,6 +995,13 @@ footer .copyright-block {
 	}
 	header .hero img {
 	   display: none;
+	}
+   	.dashboard .left-nav .site-logo {
+   		padding: 16.5px 0;
+   	}
+	.dashboard .left-nav .site-logo img {
+		height: auto;
+		width: auto;
 	}
 }
 @media (min-width: 1920px) {

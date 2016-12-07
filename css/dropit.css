@@ -14,7 +14,6 @@
   margin: 15px 0 0;
   float:right;
   display:inline-block;
-  overflow: visible;
 }
 .dropit .dropit-trigger { position: relative; }
 .dropit .dropit-submenu {
@@ -26,7 +25,24 @@
   min-width: 90px;
   list-style: none;
   padding: 20px;
-  margin: 20px 0 0;
+  margin: 23px 0 0;
+}
+.settings .dropit .dropit-submenu {
+  padding: 20px;
+  margin: 28px 9px 0 0;
+  width: 145px;
+  text-align: left;
+}
+.left-nav .dropit .dropit-submenu {
+  position: absolute;
+  bottom: 100%;
+  right: 0; /* dropdown left or right */
+  z-index: 1000;
+  display: none;
+  min-width: 90px;
+  list-style: none;
+  padding: 20px;
+  margin: -128px 9.5px 0 0;
 }
 .dropit .dropit-open .dropit-submenu {
   display: block;
@@ -46,19 +62,42 @@
   top: -8px;
   right: 10px;
  }
+ .left-nav .dropit .dropit-open .dropit-submenu:after {
+  content: " ";
+  position: absolute;
+  border-style: solid;
+  border-width: 8px 8px 0;
+  border-color: #FFFFFF transparent;
+  display: block;
+  width: 0;
+  z-index: 1;
+  top: 128px;
+  right: 10px;
+ }
  .dropit .dropit-open .dropit-submenu li {
   display: block;
   margin-bottom: 20px;
   margin-left: 10px;
  }
+  .settings > .dropit .dropit-open .dropit-submenu li {
+  margin: 0 0 32px 5px;
+ }
  .dropit .dropit-open .dropit-submenu li:last-child {
   margin-bottom: 0px;
+ }
+ .settings > .dropit .dropit-open .dropit-submenu li:last-child {
+    margin-top: 65px;
  }
  .dropit .dropit-open .dropit-submenu li a {
   color:#347F8F;
   text-decoration: none;
   font-family: "Asap", Helvetica, Arial, sans-serif;
   font-weight:100;
+  font-size: 15px;
+ } 
+ .settings > .dropit .dropit-open .dropit-submenu li a {
+    width: 100%;
+    margin-right: 2px;
  } 
  .dropit .dropit-open .dropit-submenu li a i {
    width:16px;

@@ -23,7 +23,11 @@
 				<div class="one-third logo">
 					<a href="index.html" class="site-logo"><img src="images/site-logo.png" alt="Schema"></a>
 				</div>
-				<div class="one-third homepage-menu">
+
+				<!-- RESPONSIVE NAV -->
+				<a href="#" class="hamburger" id="menu">&#9776;</a>
+
+				<div id="top-nav" class="one-third homepage-menu">
 					<ul class="top-nav">
 						<li><a href="">Features</a></li>
 						<li><a href="">Price</a></li>
@@ -31,6 +35,7 @@
 						<li><a href="">About</a></li>
 					</ul>
 				</div>
+
 				<div class="one-third">
 					<ul class="sign-in-up">
 						<li><a href="signin.html">Sign In</a></li>
@@ -174,5 +179,12 @@
 			</div>
 		</div>
 	</footer>
+   <script src="js/jquery-3.1.1.min.js"></script>
+   <script src="js/dropit.js"></script>
+   <script type="text/javascript">
+     $("#menu").click(function(){
+     	$("#top-nav").toggleClass("open", 200);
+     });
+   </script>
 </body>
 </html>
