@@ -50,30 +50,34 @@ header {
 	color: #000000;
 	font-weight: regular;
 	} 
-.top-nav {
- 	height: 100%;
- 	width: 280px;
+header .one-third {
+	width: 40%;
+}
+ .top-nav {
+ 	height: 100vh;
+ 	width: 140px;
  	color: #FFFFFF;
    background: #196779; /* Old browsers */
    background: -moz-linear-gradient(45deg,  #196779 0%, #448d9c 100%); /* FF3.6-15 */
    background: -webkit-linear-gradient(45deg,  #196779 0%,#448d9c 100%); /* Chrome10-25,Safari5.1-6 */
    background: linear-gradient(45deg,  #196779 0%,#448d9c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#196779', endColorstr='#448d9c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
-   float:left;
+   float:right;
    position: fixed;
+   right: 0;
    display:block;
    -webkit-transition: all 0.3s ease-in-out;
    -moz-transition: all 0.3s ease-in-out;
    -o-transition: all 0.3s ease-in-out;
    transition: all 0.3s ease-in-out;
-   transform: translate(-280px,0);
-     -webkit-transform: translate(-280px,0); /** Chrome & Safari **/
-     -o-transform: translate(-280px,0); /** Opera **/
-     -moz-transform: translate(-280px,0); /** Firefox **/
+   transform: translate(140px,0);
+     -webkit-transform: translate(140px,0); /** Chrome & Safari **/
+     -o-transform: translate(140px,0); /** Opera **/
+     -moz-transform: translate(140px,0); /** Firefox **/
  }
 .top-nav.open {
    display:block;
-   width:100px;
+   width:140px;
    -webkit-transition: all 0.3s ease-in-out;
    -moz-transition: all 0.3s ease-in-out;
    -o-transition: all 0.3s ease-in-out;
@@ -84,6 +88,22 @@ header {
      -moz-transform: translate(0,0); /** Firefox **/
      z-index: 100;
  }
+ .top-nav .items {
+   padding:0 6%;
+ }
+ .top-nav .items ul {
+   margin:0 0 40px;
+   padding:0;
+ }
+ .top-nav .items ul li {
+   list-style-type: none;
+   margin-bottom: 15px;
+ }
+ .top-nav .items ul li a {
+   color:#FFFFFF;
+   text-decoration: none;
+   font-weight: 100;
+ }
 .hamburger {
  	position:fixed;
    z-index: 1000;
@@ -93,9 +113,39 @@ header {
    font-size: 22px;
    padding: 10px 15px;
    border-radius: 4px;
-   left: 5px;
    top: 15px;
+   right: 10px;
  }
+header .top-nav ul > li {
+	list-style-type: none;
+	display: inline;
+	margin: 0 20px 0 0;
+}
+header .top-nav ul > li.btn-outline {
+	padding: 10px 15px;
+	background: #D17322;
+	border: 2px solid #D17322;
+	border-radius: 4px; 
+	box-shadow: 0px 2px 0px 0px #79400D;
+	width: 126px;
+    margin: auto auto auto 25px;
+    padding: 10px 30px;
+}
+
+header .top-nav ul > li.btn-outline:hover {
+	background: #79400D;
+	border: 2px solid #79400D;
+}
+header .top-nav ul > li > a {
+	color: #FFFFFF;
+	text-decoration: none;
+}
+header .top-nav ul > li.btn-outline:hover > a {
+	color: #34495E;
+}
+header .sign-in-up {
+	font-weight: bold;
+}
 header .site-logo {
 	position: relative;
 	top:-5px;
@@ -109,14 +159,21 @@ header nav {
 	background: #196779; /* Old browsers */
 	background: -moz-linear-gradient(45deg,  #196779 0%, #448d9c 100%); /* FF3.6-15 */
 	background: -webkit-linear-gradient(45deg,  #196779 0%,#448d9c 100%); /* Chrome10-25,Safari5.1-6 */
-	background: linear-gradient(45deg,  #196779 0%,#448d9c 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#196779', endColorstr='#448d9c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#196779', endColorstr='#448d9c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */ 
 }
 header nav .container > .one-third {
 	float: right;
 }
-header nav .container > .homepage-menu, header nav .container > .logo {
+header nav .container > .homepage-menu {
 	float: left;
+	display: none;
+}
+header nav .container > .onboarding {
+	display: none;
+}
+header nav .container > .logo {
+	float: left;
+	width: 30%;
 }
 header nav ul {
 	display: inline;
@@ -161,6 +218,7 @@ header .sign-in-up {
 }
 header nav a > img {
 	margin: 25px 0 0 0;
+	width: 120px;
 }
 header .hero {
 	text-align: center;
@@ -227,7 +285,6 @@ header .hero img {
 	list-style-type: none;
 	display: inline-block;
 }
-
 .square {
   position: absolute;
   width: 100%; 
@@ -519,6 +576,7 @@ footer .copyright-block {
    border-radius: 4px;
    left: 5px;
    top: 15px;
+   right: auto;
  }
  .dashboard .left-nav .site-logo {
    padding:16.5px 0 16.5px 40px;
@@ -786,15 +844,95 @@ footer .copyright-block {
    }
  }
 
+/* SMALLER TABLETS */
  /* Moving the .settings from the .left-nav to header */
  @media (min-width: 690px) {
+ 	header nav .container {
+ 		z-index: 1000;
+ 	}
+ 	header .top-nav .one-third {
+ 		display: none;
+ 	}
+ 	.top-nav {
+ 		position: relative;
+ 		height: 30px;
+ 		width: 100vw;
+ 		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#196779+0,448d9c+100 */
+	   background: #196779; /* Old browsers */
+	   background: -moz-linear-gradient(90deg,  #196779 0%, #448d9c 116%); /* FF3.6-15 */
+	   background: -webkit-linear-gradient(90deg,  #196779 0%,#448d9c 116%); /* Chrome10-25,Safari5.1-6 */
+	   background: linear-gradient(90deg,  #196779 0%,#448d9c 115%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#196779', endColorstr='#448d9c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+ 		float:none;
+ 		transform: translate(0px,-30px);
+		-webkit-transform: translate(0px,-30px); /** Chrome & Safari **/
+		-o-transform: translate(0x,-30px); /** Opera **/
+		-moz-transform: translate(0px,-30px); /** Firefox **/
+		z-index: 0;
+		top: -30px;
+ 	}
+ 	.top-nav.open {
+ 		position: relative;
+	   height: 30px;
+	   width:100vw;
+ 		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#196779+0,448d9c+100 */
+	   background: #196779; /* Old browsers */
+	   background: -moz-linear-gradient(90deg,  #196779 0%, #448d9c 116%); /* FF3.6-15 */
+	   background: -webkit-linear-gradient(90deg,  #196779 0%,#448d9c 116%); /* Chrome10-25,Safari5.1-6 */
+	   background: linear-gradient(90deg,  #196779 0%,#448d9c 115%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#196779', endColorstr='#448d9c',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+	   -webkit-transition: all 0.3s ease-in-out;
+	   -moz-transition: all 0.3s ease-in-out;
+	   -o-transition: all 0.3s ease-in-out;
+	   transition: all 0.3s ease-in-out;
+	   transform: translate(0,0);
+	     -webkit-transform: translate(0,0); /** Chrome & Safari **/
+	     -o-transform: translate(0,0); /** Opera **/
+	     -moz-transform: translate(0,0); /** Firefox **/
+	     z-index: 1;
+	 }
+	 .top-nav .items {
+	 	position: absolute;
+		width: 100%; 
+		height: 100%;
+		padding: 0;
+		}
+	.top-nav .items ul {
+		text-align: center; 
+		padding-top: 0;
+		padding-left: 10%;
+		}
+	 .top-nav .items ul li {
+	 	display: inline;
+	 	margin-right: 50px;
+	 }
+	.hamburger {
+	 	position:relative;
+	   z-index: 1000;
+	   background: rgba(0,0,0,0);
+	   color:#FFF;
+	   text-decoration: none;
+	   font-size: 22px;
+	   padding: 10px 15px;
+	   border-radius: 4px;
+	   top: 23.5px;
+	   left: 45%;
+	   right: auto;
+	   top: -56px;
+	 }
+ 	header nav a > img {
+ 		width: auto;
+ 	}
+ 	header nav .container > .onboarding {
+ 		display: block;
+ 	}
  	.dashboard header .right-block .settings {
  		display: block;
  	}
  	.dashboard .left-nav .settings {
  		display: none;
  	}
- .dashboard header .middle-block {
+ 	.dashboard header .middle-block {
  	margin-right: 290px;
  	}
  }
@@ -895,6 +1033,9 @@ footer .copyright-block {
 
 /* LAPTOPS AND DESKTOPS */
 @media (min-width: 992px) {
+	.top-nav.open {
+		display: none;
+	}
 	.container {
 		width: 970px;
 	}
@@ -909,6 +1050,20 @@ footer .copyright-block {
 	}
 	.logo {
 		width: 20%;
+	}
+	header .top-nav {
+		display: none;
+	}
+	header nav .container > .homepage-menu {
+		float: left;
+		display: block;
+		width: 35%;
+	}
+	header nav .container > .logo {
+		width: 20%;
+	}
+	header nav .container > .onboarding {
+		width: 22.5%;
 	}
 	.homepage-menu {
 		width: 38%;
