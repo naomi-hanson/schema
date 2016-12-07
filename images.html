@@ -15,8 +15,14 @@
 	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome.css">
 	<link rel="stylesheet" type="text/css" href="css/animate.css">
+	<link rel="stylesheet" type="text/css" href="css/dropit.css">
 </head>
+
 <body class="dashboard">
+
+	<!-- RESPONSIVE NAV -->
+	<a href="#" class="hamburger" id="menu">&#9776;</a>
+
 	<!-- LEFT NAV -->
 	<nav id="left-nav" class="left-nav">
 		<a href="#" class="site-logo"><img src="images/site-logo.png"></a>
@@ -25,7 +31,7 @@
 			<ul>
 				<li><a href="dashboard.html"><i class="fa fa-th-large"></i>All Items</a></li>
 				<li><a href="#"><i class="fa fa-file-o"></i>Notes</a></li>
-				<li><i class="fa fa-picture-o"></i><strong>Images</strong></li>
+				<li class="active"><i class="fa fa-picture-o"></i>Images</li>
 				<li><a href="#"><i class="fa fa-link"></i>Links</a></li>
 			</ul>
 			<p>Boxes</p>
@@ -35,21 +41,67 @@
 				<li><a href="#"><i class="fa fa-plus-square-o"></i>Add a new box</a></li>
 			</ul>
 		</div>
+		<div class="settings">
+			<img src="images/avatar.jpg">
+			<p><strong>Naomi Hanson</strong></p>
+			<ul class="menu">
+	            <li>
+	            	<a href="#"><i class="fa fa-cog"></i></a>
+	            	<ul>
+	                  <li><a href="#"><i class="fa fa-cog"></i> Account Settings</a></li>
+	                  <li><a href="#"><i class="fa fa-group"></i> Collaborators</a></li>
+	                  <li><a href="#"><i class="fa fa-sign-out"></i> Sign Out</a></li>
+	              </ul>
+	            </li>
+	        </ul>
+		</div>
 	</nav>
-	<main role="main">
-		<!-- CONTENT -->
-		<section class="content">
-			<div class="container">
+
+	<!-- HEADER -->
+	<header>
+		<div class="container">
+			<div class="left-block">
 				<div class="header">
 					<h1>All Items</h1>
-					<a href="#" class="btn">+ Add</a>		
-				<div class="settings">
-					<img src="images/avatar.jpg">
-					<p>Naomi Hanson</p>
-					<a href="#"><i class="fa fa-cog"></i></a>
-				</div>
 				</div>
 			</div>
+			<div class="right-block">
+				<div class="middle-block">
+					<div class="header">
+						<ul class="menu">
+				            <li>
+				              <a href="#" class="btn">+ Add</a>
+				              <ul>
+				                  <li><a href="#"><i class="fa fa-file-o"></i> Note</a></li>
+				                  <li><a href="#"><i class="fa fa-picture-o"></i> Image</a></li>
+				                  <li><a href="#"><i class="fa fa-link"></i> Link</a></li>
+				              </ul>
+				            </li>
+				        </ul>
+					</div>
+				</div>
+				<div class="settings">
+					<img src="images/avatar.jpg">
+					<p><strong>Naomi Hanson</strong></p>
+					<ul class="menu">
+			            <li>
+			            	<a href="#"><i class="fa fa-cog"></i></a>
+			            	<ul>
+			                  <li><a href="#"><i class="fa fa-cog"></i> Account Settings</a></li>
+			                  <li><a href="#"><i class="fa fa-group"></i> Collaborators</a></li>
+			                  <li><a href="#"><i class="fa fa-sign-out"></i> Sign Out</a></li>
+			              </ul>
+			            </li>
+			        </ul>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<main role="main">
+
+		<!-- CONTENT -->
+		<section class="content">
 			<div class="container">
 				<div class="content-item">
 					<div class="item-box">
@@ -134,5 +186,22 @@
 			</div>
 		</section>
 	</main>
+   <script src="js/jquery-3.1.1.min.js"></script>
+   <script src="js/dropit.js"></script>
+   <script type="text/javascript">
+     $(".menu").dropit();
+     $("#menu").click(function(){
+      	$("#left-nav").toggleClass("open", 200);
+      });
+     // $("#menu").click(function(event){
+     // 	event.stopPropagation();
+     // 	$("#left-nav").toggleClass("open", 200);
+     // });
+     // $(document).click( function(){
+     // 	$('#left-nav').hide();
+     // });
+            
+                
+   </script>
 </body>
 </html>
