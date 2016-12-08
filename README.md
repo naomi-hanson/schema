@@ -5,4 +5,4 @@ My project Schema is a SaaS (Software as a Service) web application which allows
 
 Pages:
 - https://naomi-hanson.github.io/schema/
--https://naomi-hanson.github.io/schema/dashboard.html
+- https://naomi-hanson.github.io/schema/dashboard.html
